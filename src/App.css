@@ -16,11 +16,6 @@ body { min-height: 100%; }
   
 }
 
-.header { 
-  grid-area: header; 
-  background-color: red;
-}
-
 .nav-left {
    grid-area: nav-left;
    background-color: yellow;
