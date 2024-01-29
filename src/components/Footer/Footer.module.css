@@ -1,0 +1,4 @@
+.footerDown { 
+    grid-area: footer; 
+    background-color: purple;
+  }
