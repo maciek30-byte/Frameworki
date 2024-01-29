@@ -1,9 +1,5 @@
-import FooterCSS from './Footer.module.css'
+import styles from "./Footer.module.css";
 
-export const Footer = () =>{
-    return(
-
-        <div className={FooterCSS.footer}> footer </div>
-
-    )
-}
+export const Footer = () => {
+  return <div className={styles.footerDown}> footer </div>;
+};

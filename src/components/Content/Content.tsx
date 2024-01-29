@@ -1,9 +1,5 @@
-import ContentCSS from './Content.module.css'
+import styles from "./Content.module.css";
 
 export const Content = () => {
-    return(
-
-        <div className={ContentCSS.Content}> content </div>
-
-    )
-}
+  return <div className={styles.content}> </div>;
+};
