@@ -4,9 +4,14 @@ import styles from "./LoginSignUp.module.css";
 import user_icon from "../Assets/user.jpg.png";
 import email_icon from "../Assets/mail.png";
 import password_icon from "../Assets/password.png";
+export const toggleVisibility = () => {
+  setIsVisible(!isVisible);
+};
 
 export const LoginSignUp = () => {
   const [action, setAction] = useState("Sign Up");
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>

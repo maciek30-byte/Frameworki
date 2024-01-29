@@ -90,3 +90,7 @@ color: white;
     background:white;
     color:rgb(212, 199, 199)
 }
+
+.visible{
+    display: block;
+}
