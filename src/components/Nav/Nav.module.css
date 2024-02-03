@@ -1,15 +1,12 @@
 .container {
-    grid-area: nav-left;
-    background-color: yellow;
- }
- .buttons{
-    display:flex;
-    flex-direction: column;
-    height:30px;
-    width:100%;
-    background:red;
-    border-radius:20px;
- }
- .button{
-    margin:auto;
- }
+  grid-area: nav-left;
+  background-color: yellow;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 100%;
+  border-radius: 20px;
+  align-items: center;
+}

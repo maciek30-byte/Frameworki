@@ -1,8 +1,12 @@
-html { height: 100%; }
-body { min-height: 100%; }
-.container {  
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.container {
   display: grid;
-  grid-template-columns: 0.5fr 1.7fr 1fr;
+  grid-template-columns: 0.1fr 1.7fr 1fr;
   grid-template-rows: 0.1fr 1fr 0.1fr;
   gap: 0px 0px;
   grid-auto-rows: auto;
@@ -13,22 +17,19 @@ body { min-height: 100%; }
     "nav-left footer footer";
   width: 100vw;
   height: 100vh;
-  
 }
 
 .nav-left {
-   grid-area: nav-left;
-   background-color: yellow;
-   
+  grid-area: nav-left;
+  background-color: yellow;
 }
 
-.footer { 
-  grid-area: footer; 
+.footer {
+  grid-area: footer;
   background-color: purple;
 }
 
 .content {
-   grid-area: content;
-   background-color: pink; 
-
+  grid-area: content;
+  background-color: pink;
 }
