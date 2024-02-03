@@ -1,6 +1,4 @@
-.headerTop{
-    text-align: center;
-    background-color: blue;
-    grid-area: header;
+.headerTop {
+  text-align: center;
+  grid-area: header;
 }
-

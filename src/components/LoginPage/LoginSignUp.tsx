@@ -1,37 +1,28 @@
 import { useState } from "react";
+import { HeaderTitle } from "./components/HeaderTitle/HeaderTitle";
+import { InputField } from "./components/InputField/InputField";
 import styles from "./LoginSignUp.module.css";
 
-import user_icon from "../Assets/user.jpg.png";
+import user_icon from "../Assets/user.png";
 import email_icon from "../Assets/mail.png";
 import password_icon from "../Assets/password.png";
 
 export const LoginSignUp = () => {
-  const [action, setAction] = useState("Sign Up");
+  const [loginOrSignup, setLoginOrSignup] = useState<string>("Login");
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <div className={styles.text}>{action}</div>
-      </div>
-      <div className={styles.underline}></div>
+      <HeaderTitle loginOrSignup={loginOrSignup} />
+      <div className={styles.underline} />
       <div className={styles.inputs}>
-        <div className={styles.input}>
-          <img className={styles.icon} src={user_icon} alt="" />
-          <input type="text" placeholder="Login" />
-        </div>
-        {action === "Login" ? (
+        <InputField icon={user_icon} placeholder="Login" />
+        {loginOrSignup === "Login" ? (
           ""
         ) : (
-          <div className={styles.input}>
-            <img className={styles.icon} src={email_icon} alt="" />
-            <input type="email" placeholder="Email" />
-          </div>
+          <InputField icon={email_icon} placeholder="Email" />
         )}
-        <div className={styles.input}>
-          <img className={styles.icon} src={password_icon} alt="" />
-          <input type="password" placeholder="Password" />
-        </div>
+        <InputField icon={password_icon} placeholder="Password" />
       </div>
-      {action === "Sign Up" ? (
+      {loginOrSignup === "Sign Up" ? (
         ""
       ) : (
         <div className={styles.forgotPassword}>
@@ -41,22 +32,22 @@ export const LoginSignUp = () => {
       <div className={styles.submitContainer}>
         <div
           className={
-            action === "Login"
+            loginOrSignup === "Login"
               ? `${styles.submit} ${styles.grey}`
               : styles.submit
           }
-          onClick={() => setAction("Sign Up")}
+          onClick={() => setLoginOrSignup("Sign Up")}
         >
           Sign Up
         </div>
         <div
           className={
-            action === "Sign Up"
+            loginOrSignup === "Sign Up"
               ? `${styles.submit} ${styles.grey}`
               : styles.submit
           }
           onClick={() => {
-            setAction("Login");
+            setLoginOrSignup("Login");
           }}
         >
           Login
